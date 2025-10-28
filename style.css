@@ -1,0 +1,30 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f76c5e;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: #f76c5e;
+    text-align: center;
+}
+
+.description {
+    font-size: 1rem;
+    color:#f76c5e;
+    text-align: center;
+}
