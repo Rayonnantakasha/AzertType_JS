@@ -1,4 +1,4 @@
-
+/*
 //fonction pour afficher les resultats
 function afficherResultat(score,nombreMotsProposer) {
     return console.log("Votre resultat est de " + score + " sur " + nombreMotsProposer)
@@ -39,3 +39,4 @@ function lancerJeu() {
     }
     afficherResultat(score, nombreMotsProposer)
 }
+*/
