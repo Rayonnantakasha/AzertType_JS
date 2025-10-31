@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="config.js"></script>   
-    <script src="script.js"></script>
-    <script src="main.js"></script>
+    <script src="scripts/config.js"></script>   
+    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
     <title>AzerType</title>
 </head>
 <body>
@@ -23,23 +23,24 @@
         <div class="container container-jeu">
           <p>Choisissez votre option et tapez les propositions qui s'affichent en dessous</p>
          <div class="choix">
-             <div >
-              <input type="radio" name="mots" id="">
+             <div>
+              <input type="radio" name="optionSource" id="" value="1" checked>
               <label for="mots">Mots</label>
             </div>
             <div>
-              <input type="radio" name="phrases" id=""> 
+              <input type="radio" name="optionSource" id="" value="2" checked> 
               <label for="phrases">Phrases</label>
             </div>
          </div>
-         <div style = "padding-top: 0.5rem">
-            <input type="text" name="" id="" class="input-proposition">
-            <div style = "padding-top: 1rem" >
-                <input type="text" name="" id="" class="input-motUser">
-                <button>Valider</button>
-            </div>
-            <p>Votre score est de :<span>0/0</span></p>
-        </div>
+
+         <div class="zoneProposition">
+           <span> </span>
+         </div>
+         <div>
+          <input type="text" name="motUser" id="motUser" class="input-motUser">
+          <button id="btnValider" type="submit">Valider</button>
+         </div>
+         <p>Votre score est de :<span>0/0</span></p>
       </section>
     </main>
     <footer>
