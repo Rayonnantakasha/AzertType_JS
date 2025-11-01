@@ -162,6 +162,7 @@ footer {
     font-size: 30px;
     font-weight: 600;
     color: var(--color-primary);
+
 }
 
 /* Zone de saisie */
@@ -175,6 +176,7 @@ footer {
 /* Eléments du formulaire de saisie */
 .zoneSaisie input[type='text'] {
     width: 80%;
+    text-align: center;
 }
 
 .zoneSaisie button {
