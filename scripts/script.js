@@ -20,6 +20,11 @@ function afficherResultat(score, nbMotsProposes) {
 }
 
 
+function afficherProposition (proposition) {
+    let zoneProposition = document.querySelector(".zoneProposition")
+    zoneProposition.innerText = proposition
+}
+
 
 /**
  * Cette fonction lance le jeu. 
@@ -30,12 +35,23 @@ function lancerJeu() {
 
     let score = 0
     let nbMotsProposes = 0
+    let i = 0
 
     let btnValiderMot = document.getElementById("btnValiderMot")
     let inputEcriture = document.getElementById("inputEcriture")
-
+     afficherProposition(listeMots[i])
     btnValiderMot.addEventListener("click", () => {
     console.log(inputEcriture.value)
+    i++
+    inputEcriture.value =" "
+    if (listeMots[i] === undefined) {
+        afficherProposition("Le jeu est fini")
+        btnValiderMot.disabled = true
+    }else{
+        afficherProposition(listeMots[i])
+    }
+
+    afficherProposition(listeMots[i])
     })
 
 
