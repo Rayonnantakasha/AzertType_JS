@@ -27,8 +27,16 @@ function afficherResultat(score, nbMotsProposes) {
  */
 function lancerJeu() {
     // Initialisations
+
     let score = 0
     let nbMotsProposes = 0
+
+    let btnValiderMot = document.getElementById("btnValiderMot")
+    let inputEcriture = document.getElementById("inputEcriture")
+
+    btnValiderMot.addEventListener("click", () => {
+    console.log(inputEcriture.value)
+    })
 
 
     afficherResultat(score, nbMotsProposes)
