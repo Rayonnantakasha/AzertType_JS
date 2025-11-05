@@ -22,7 +22,7 @@ function afficherResultat(score, nbMotsProposes) {
 
 function afficherProposition (proposition) {
     let zoneProposition = document.querySelector(".zoneProposition")
-    zoneProposition.innerText = proposition
+    zoneProposition.innerText = proposition 
 }
 
 
@@ -34,19 +34,29 @@ function lancerJeu() {
     // Initialisations
 
     let score = 0
-    let i = 0
+    let i = 0 // Ce compteur remplace le nbMotsProposer
 
     let btnValiderMot = document.getElementById("btnValiderMot")
     let inputEcriture = document.getElementById("inputEcriture")
+
+    //on fait appel à la fonction qui affiche les mots du jeu
      afficherProposition(listeMots[i])
+
+    // on ajoute un évenement sur le bouton de validation
     btnValiderMot.addEventListener("click", () => {
     console.log(inputEcriture.value)
+
+    //on compare le mot du user et celui de l'application et augmente le score
     if (inputEcriture.value === listeMots[i]) {
         score++
     }
-    i++
-    afficherResultat(score, i)
-    inputEcriture.value =" "
+    i++ // le compteur de nbMotsProposer augmente aussi
+
+    afficherResultat(score, i) // on affiche au préalable le resultat
+
+    inputEcriture.value =" " //vider l zone de saiser après avoir cliquer sur le bouton valider
+
+    //ici on crée une condition pour que le mot undefined ne s'affiche pasd
     if (listeMots[i] === undefined) {
         afficherProposition("Le jeu est fini")
         btnValiderMot.disabled = true
@@ -57,7 +67,7 @@ function lancerJeu() {
     afficherProposition(listeMots[i])
     })
 
-
+    //on affiche le résultat final
     afficherResultat(score, i)
 }
 
