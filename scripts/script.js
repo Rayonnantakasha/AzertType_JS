@@ -64,7 +64,6 @@ function lancerJeu() {
         afficherProposition(listeMots[i])
     }
 
-    afficherProposition(listeMots[i])
     })
 
     //on affiche le résultat final
