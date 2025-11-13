@@ -35,19 +35,20 @@ function lancerJeu() {
 
     let score = 0
     let i = 0 // Ce compteur remplace le nbMotsProposer
+    let listeProposition = listeMots
 
     let btnValiderMot = document.getElementById("btnValiderMot")
     let inputEcriture = document.getElementById("inputEcriture")
 
     //on fait appel à la fonction qui affiche les mots du jeu
-     afficherProposition(listeMots[i])
+     afficherProposition(listeProposition[i])
 
     // on ajoute un évenement sur le bouton de validation
     btnValiderMot.addEventListener("click", () => {
     console.log(inputEcriture.value)
 
     //on compare le mot du user et celui de l'application et augmente le score
-    if (inputEcriture.value === listeMots[i]) {
+    if (inputEcriture.value === listeProposition[i]) {
         score++
     }
     i++ // le compteur de nbMotsProposer augmente aussi
@@ -57,14 +58,30 @@ function lancerJeu() {
     inputEcriture.value =" " //vider l zone de saiser après avoir cliquer sur le bouton valider
 
     //ici on crée une condition pour que le mot undefined ne s'affiche pasd
-    if (listeMots[i] === undefined) {
+    if (listeProposition[i] === undefined) {
         afficherProposition("Le jeu est fini")
         btnValiderMot.disabled = true
     }else{
-        afficherProposition(listeMots[i])
+        afficherProposition(listeProposition[i])
     }
 
     })
+
+    let listsBtnRadio = document.querySelectorAll(".optionSource input") // recuperation des boutons radio
+
+    //boucle pour parcourir chaque bouton
+    for(let index = 0; index < listsBtnRadio.length; index++  ){
+        listsBtnRadio[index].addEventListener("change", (event) => {
+           console.log(event.target.value)
+            if (event.target.value === "1") {
+            listeProposition = listeMots
+        } else{
+           listeProposition = listePhrases 
+        }
+        afficherProposition(listeProposition[i])
+        })
+       
+    }
 
     //on affiche le résultat final
     afficherResultat(score, i)
