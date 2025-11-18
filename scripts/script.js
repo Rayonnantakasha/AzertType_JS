@@ -55,7 +55,7 @@ function lancerJeu() {
 
     afficherResultat(score, i) // on affiche au préalable le resultat
 
-    inputEcriture.value =" " //vider l zone de saiser après avoir cliquer sur le bouton valider
+    inputEcriture.value =" " //vider la zone de saiser après avoir cliquer sur le bouton valider
 
     //ici on crée une condition pour que le mot undefined ne s'affiche pasd
     if (listeProposition[i] === undefined) {
