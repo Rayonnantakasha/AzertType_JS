@@ -266,4 +266,8 @@ footer {
         width: 90%;
         padding: 10px;
     }
+
+    header h2, h3 {
+        text-align: center;
+    }
 }
