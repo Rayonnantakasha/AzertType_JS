@@ -1,4 +1,3 @@
-
 /**
  * Reset
  */
@@ -200,7 +199,6 @@ footer {
     height: 100vh;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 9999;
 }
 
 .popup {
@@ -219,16 +217,14 @@ footer {
     font-weight: 500;
     background-color: #f76c5e;
     border-radius: 30px;
-    z-index: 10000;;
+    z-index: 1;
 }
-
 
 
 
 .active {
     display: flex !important;
 }
-
 
 .popup p {
     width: 100%;
@@ -244,7 +240,6 @@ footer {
 /* Eléments de formulaire */
 .popup input {
     margin-bottom: 10px;
-    margin-top: 5px;
 }
 
 .popup button {
