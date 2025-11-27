@@ -5,8 +5,6 @@
     --bg: #f7f9fc;
     --card: #0a4174;
     --accent: #7bbde8; /* indigo-600 */
-    --muted: #6b7280;
-    --danger: #ef4444;
 }
 
 * {
@@ -61,8 +59,7 @@ input[type='email'] {
     border-radius: 5px;
     font-size: 17px;
     font-weight: 600;
-    font-size: 17px;
-    color: var(--color-primary);
+
 }
 
 input[type='text']::placeholder,
@@ -237,8 +234,7 @@ footer {
 
 .popup div {
     font-size: 25px;
-    padding: 5px;
-    padding-bottom: 15px;
+    padding: 5px 5px 15px 15px;
 }
 
 /* Eléments de formulaire */
